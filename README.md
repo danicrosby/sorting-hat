@@ -50,3 +50,38 @@ Think of a way you can expel students without just hiding those divs on the page
 - House Colors: The color of the student's card changes depending on which house they were sorted. 
 - Card Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
 - Voldermort's Army: Create a separate container of cards that hold the cards for students that have been expelled. These should be styled differently from Hogwarts students.
+
+
+README.MD SETUP
+
+DATE:
+
+
+PROJECT NAME:
+
+
+PROJECT OVERVIEW:
+
+
+WIREFRAME:
+
+
+LOOM VIDEO DEMO:
+
+
+NELIFY WEBSITE:
+
+
+PROJECT BOARD:
+
+
+USER STORY:
+
+
+FEATURES:
+
+
+SCREENSHOTS:
+
+
+CONTRIBUTORS | Github approvals from:
