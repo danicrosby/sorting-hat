@@ -11,11 +11,11 @@ const houses = [
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId);
   selectedDiv.innerHTML = textToPrint;
-}
+};
 
 const createCard = (obj) => {
   let domString = "";
-    domString += `
+  domString += `
                 <div class="card d-flex mx-auto text-center" style="width: 20em; height: 20em" id=${Math.random}>
                 <h5 class="card-header">STUDENT</h5>
                 <div class="card-body">
@@ -25,17 +25,8 @@ const createCard = (obj) => {
                 </div>
               </div>`;
 
-    printToDom("#students", domString);
-
-  }
-
-
-
-// const chooseRandomHouse = () => {
-//   const randomNum = Math.floor(Math.random() * colors.length);
-//   document.querySelector('body').style.background = colors[randomNum];
-// };
-
+  printToDom("#students", domString);
+};
 
 const handleButtonClick = (e) => {
   const buttonId = e.target.id;
@@ -47,34 +38,34 @@ const handleButtonClick = (e) => {
               <div class="card-body d-flex float-left">
                 <input type="text" class="form-control mr-3" style="width: 30em" id="name" placeholder="Student's Name..." aria-label="Recipient's username" aria-describedby="button-addon2">
                 <br>
-                <button class="btn btn-outline-secondary" type="button" style=""id="sort">SORT</button>
+                <button class="btn btn-outline-secondary" type="submit" style=""id="sort">SORT</button>
               </div>
             </div>
                 `;
 
-      document.querySelector("#sort").addEventListener("click", getFormInfo);
+    document.querySelector("#sort").addEventListener("click", getFormInfo);
   }
 };
 
 const getFormInfo = (e) => {
   e.preventDefault();
 
-  const name = document.querySelector('#name').value;
+  const name = document.querySelector("#name").value;
+
+  const randomHouseIndex = Math.floor(Math.random() * houses.length);
+  const house = houses[randomHouseIndex];
 
   const obj = {
     name,
-    house: "Gryffindor"
-  }
+    house,
+  };
 
   createCard(obj);
-  createCard(houses);
-
-  document.querySelector('#name').value = " ";
-
-}
+  document.querySelector("#name").value = " ";
+};
 
 const buttonEvents = () => {
-  document.querySelector("#btn").addEventListener("click", handleButtonClick);
+  document.querySelector("#btn").addEventListener("click",handleButtonClick);
 };
 
 const init = () => {
