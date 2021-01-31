@@ -69,7 +69,7 @@ WIREFRAME:
 LOOM VIDEO DEMO:
 
 
-NELIFY WEBSITE:
+NELIFY WEBSITE: https://danicrosby-bio.netlify.app/
 
 
 PROJECT BOARD:
