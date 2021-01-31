@@ -1,9 +1,1 @@
-body {
-  background-color: darkmagenta;
-}
 
-#main-container {
-  display: flex;
-  flex-flow: column wrap;
-  border: 1px solid green;
-}
