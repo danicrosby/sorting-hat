@@ -1,10 +1,4 @@
 
-//MY THOUGHT WAS TO INCREMENT THE CARD ID NUMBER WITH A GLOBAL I++
-
-// let studentCardId = 1;
-
-
-
 const houses = [
   "Gryffindor",
   "Hufflepuff",
@@ -71,8 +65,8 @@ const getFormInfo = (e) => {
 };
 
 const deleteCard = (e) => {
-  e.target.closest(".student-card").remove(); //GOT THIS HANDY CODE OF THE NETS. IT DELETES THE WHOLE 'CARD'
-                                                  //BUT I NEED TO TARGET THE INCREMETED IDS OF EACH NEW CARD?? HELP?
+  e.target.closest(".student-card").remove();  //need to change this function- need to make and access unique id's in createCard function
+                                              
 };
 
 const buttonEvents = () => {
@@ -84,4 +78,4 @@ const init = () => {
 };
 
 init();
-studentCardId++
+
