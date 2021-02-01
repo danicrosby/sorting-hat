@@ -1,6 +1,4 @@
 
-//MY THOUGHT WAS TO INCREMENT THE CARD ID NUMBER WITH A GLOBAL I++
-
 // let studentCardId = 1;
 
 
@@ -21,17 +19,22 @@ const printToDom = (divId, textToPrint) => {
 };
 
 const createCard = (obj) => {
-  let domString = `
-                <div class="card student-card mx-auto text-center" style="width: 20em; height: 20em">
-                  <h5 class="card-header">STUDENT</h5>
-                  <div class="card-body">
-                    <h5 class="card-title">${obj.name}</h5>
-                    <p class="card-text">${obj.house}</p>
-                    <button type="button" class="btn btn-dark" id="expel">EXPEL</button>
-                  </div>
-                </div>`;
+  let domString = '';
+    houses.forEach((item, i) => {
+      domString = `
+                  <div class="card student-card mx-auto text-center" style="width: 20em; height: 20em" id=${i}>
+                    <h5 class="card-header">STUDENT</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">${item.name}</h5>
+                      <p class="card-text">${item.house}</p>
+                      <button type="button" class="btn btn-dark" id=${i}>EXPEL</button>
+                    </div>
+                  </div>`;
+
+    });
   
   printToDom("#students", domString);
+  // studentCardId++
 };
 
 const handleButtonClick = (e) => {
@@ -60,19 +63,19 @@ const getFormInfo = (e) => {
   const randomHouseIndex = Math.floor(Math.random() * houses.length);
   const house = houses[randomHouseIndex];
 
-  const obj = {
+  const item = {
     name,
     house,
   };
 
-  createCard(obj);
+  createCard(item);
 
   document.querySelector("#name").value = "";
 };
 
 const deleteCard = (e) => {
-  e.target.closest(".student-card").remove(); //GOT THIS HANDY CODE OF THE NETS. IT DELETES THE WHOLE 'CARD'
-                                                  //BUT I NEED TO TARGET THE INCREMETED IDS OF EACH NEW CARD?? HELP?
+  e.target.closest(".student-card").remove();
+                                            
 };
 
 const buttonEvents = () => {
@@ -84,4 +87,3 @@ const init = () => {
 };
 
 init();
-studentCardId++
