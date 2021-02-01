@@ -1,8 +1,4 @@
 
-// let studentCardId = 1;
-
-
-
 const houses = [
   "Gryffindor",
   "Hufflepuff",
@@ -19,22 +15,17 @@ const printToDom = (divId, textToPrint) => {
 };
 
 const createCard = (obj) => {
-  let domString = '';
-    houses.forEach((item, i) => {
-      domString = `
-                  <div class="card student-card mx-auto text-center" style="width: 20em; height: 20em" id=${i}>
-                    <h5 class="card-header">STUDENT</h5>
-                    <div class="card-body">
-                      <h5 class="card-title">${item.name}</h5>
-                      <p class="card-text">${item.house}</p>
-                      <button type="button" class="btn btn-dark" id=${i}>EXPEL</button>
-                    </div>
-                  </div>`;
-
-    });
+  let domString = `
+                <div class="card student-card mx-auto text-center" style="width: 20em; height: 20em">
+                  <h5 class="card-header">STUDENT</h5>
+                  <div class="card-body">
+                    <h5 class="card-title">${obj.name}</h5>
+                    <p class="card-text">${obj.house}</p>
+                    <button type="button" class="btn btn-dark" id="expel">EXPEL</button>
+                  </div>
+                </div>`;
   
   printToDom("#students", domString);
-  // studentCardId++
 };
 
 const handleButtonClick = (e) => {
@@ -63,19 +54,19 @@ const getFormInfo = (e) => {
   const randomHouseIndex = Math.floor(Math.random() * houses.length);
   const house = houses[randomHouseIndex];
 
-  const item = {
+  const obj = {
     name,
     house,
   };
 
-  createCard(item);
+  createCard(obj);
 
   document.querySelector("#name").value = "";
 };
 
 const deleteCard = (e) => {
-  e.target.closest(".student-card").remove();
-                                            
+  e.target.closest(".student-card").remove();  //need to change this function- need to make and access unique id's in createCard function
+                                              
 };
 
 const buttonEvents = () => {
@@ -87,3 +78,4 @@ const init = () => {
 };
 
 init();
+
