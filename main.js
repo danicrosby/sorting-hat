@@ -1,3 +1,4 @@
+const students = [];
 
 const houses = [
   "Gryffindor",
@@ -10,21 +11,23 @@ const houses = [
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId);
 
-  selectedDiv.innerHTML += textToPrint;
-  document.querySelector(".student-card").addEventListener("click", deleteCard);
+  selectedDiv.innerHTML = textToPrint;
 };
 
-const createCard = (obj) => {
-  let domString = `
+const createCard = (arr) => {
+  let domString = "";
+  for (let i = 0; i < arr.length; i++) {
+    domString += `
                 <div class="card student-card mx-auto text-center" style="width: 20em; height: 20em">
                   <h5 class="card-header">STUDENT</h5>
                   <div class="card-body">
-                    <h5 class="card-title">${obj.name}</h5>
-                    <p class="card-text">${obj.house}</p>
-                    <button type="button" class="btn btn-dark" id="expel">EXPEL</button>
+                    <h5 class="card-title">${arr[i].name}</h5>
+                    <p class="card-text">${arr[i].house}</p>
+                    <button type="button" class="btn btn-dark" id="${arr[i].id}">EXPEL</button>
                   </div>
                 </div>`;
-  
+  }
+
   printToDom("#students", domString);
 };
 
@@ -54,23 +57,40 @@ const getFormInfo = (e) => {
   const randomHouseIndex = Math.floor(Math.random() * houses.length);
   const house = houses[randomHouseIndex];
 
+  // get all the student IDs and create a new array and sort them lowest to highest
+  const studentIds = students
+    .map((student) => student.id)
+    .sort((a, b) => a - b);
+
+  // ternary operator: if the students array is not empty, create an ID that is +1 of the last item in the array. Otherwise make the id 1
+  const id = studentIds.length ? studentIds[studentIds.length - 1] + 1 : 1;
+
   const obj = {
     name,
     house,
+    id,
   };
 
-  createCard(obj);
+  students.push(obj);
+  createCard(students);
 
   document.querySelector("#name").value = "";
 };
 
 const deleteCard = (e) => {
-  e.target.closest(".student-card").remove();  //need to change this function- need to make and access unique id's in createCard function
-                                              
+  const targetType = e.target.type;
+  const targetId = Number(e.target.id);
+
+  if (targetType === "button") {
+    const studentIndex = students.findIndex((student) => student.id === targetId);
+    students.splice(studentIndex, 1);
+  }
+  createCard(students);
 };
 
 const buttonEvents = () => {
   document.querySelector("#btn").addEventListener("click", handleButtonClick);
+  document.querySelector("#students").addEventListener("click", deleteCard);
 };
 
 const init = () => {
@@ -79,3 +99,5 @@ const init = () => {
 
 init();
 
+    // this method returns the index of the object you are trying to remove in the array (85_)
+    // this removes the item from the array - NOTE: this modifies the original array 86
