@@ -18,11 +18,14 @@ const createCard = (arr) => {
   let domString = "";
   for (let i = 0; i < arr.length; i++) {
     domString += `
-                <div class="card student-card mx-auto text-center" style="width: 20em; height: 20em">
-                  <h5 class="card-header">STUDENT</h5>
+                <div class="card student-card text-center" style="width: 20em; height: 33em; margin: 1em" id="student-card">
+                  <h5 class="card-header" style="font-size: 2em">Hogwarts</h5>
                   <div class="card-body">
                     <h5 class="card-title">${arr[i].name}</h5>
                     <p class="card-text">${arr[i].house}</p>
+                    <hr>
+                    <div class="crest-img"><img src="./images/gryffindor.jpg" alt="House Crest" style="width: 80%"></div>
+                    <hr>
                     <button type="button" class="btn btn-dark" id="${arr[i].id}">EXPEL</button>
                   </div>
                 </div>`;
@@ -36,7 +39,7 @@ const handleButtonClick = (e) => {
 
   if (buttonId === "btn") {
     document.querySelector("#form").innerHTML = `
-            <div class="card mx-auto" id="input-form" style="width: 40em">
+            <div class="card" id="input-form" style="width: 40em; margin-top: -5em; margin-left: 2em; margin-bottom: 1em">
               <h5 class="card-header m-2">Enter First Year's Student Name</h5>
               <div class="card-body d-flex float-left">
                 <input type="text" class="form-control w-30 mr-3" id="name" placeholder="Student's Name..." aria-describedby="button-addon2">

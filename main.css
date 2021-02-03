@@ -1,6 +1,18 @@
-body {
+h1 {
+  font-family: "Oswald", Helvetica Neue;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+.title-img-container {
   display: flex;
-  background-image: url(./images/hat\ fan\ art.jpg);
-  background-repeat: no-repeat;
-  background-position-x: right;
-};
+  flex-flow: wrap;
+}
+
+
+#students {
+  background-color: rgb(250, 250, 250);
+  margin: 2em;
+  padding: 2em;
+  margin-left: -12em;
+}
