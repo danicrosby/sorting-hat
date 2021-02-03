@@ -45,7 +45,7 @@ blockquote {
 }
 
 #students {
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
   margin: 2em;
   padding: 2em;
   margin-left: -12em;
@@ -72,8 +72,6 @@ blockquote {
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
 }
-
-
 
 .sticky-section {
   position: sticky;
