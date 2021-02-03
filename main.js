@@ -5,8 +5,15 @@ const houses = [
   "Hufflepuff",
   "Ravenclaw",
   "Slytherin",
-  "Voledemort's Army",
+  "Voldemort",
 ];
+
+const Gryffindor = "https://i.pinimg.com/564x/52/f6/a3/52f6a3ab31c18f05bb820a4c2d3ae7be.jpg";
+const Hufflepuff = "https://i.pinimg.com/564x/1e/da/bb/1edabbdae3522af14d88885d3d4a9d96.jpg";
+const Slytherin = "https://i.pinimg.com/564x/70/8d/52/708d520bfcb166221752314daf91b0f0.jpg";
+const Ravenclaw = "https://i.pinimg.com/564x/39/c7/9c/39c79c53ba35087545586d5865bb44f4.jpg";
+const Voldemort = "https://i.pinimg.com/originals/97/f5/e8/97f5e8f5f26735339fdd152e76d8d293.jpg?epik=dj0yJnU9OUtyX3MxdEpmbEY3YkJiNXBhttps://i.pinimg.com/originals/97/f5/e8/97f5e8f5f26735339fdd152e76d8d293.jpg?epik=dj0yJnU9OUtyX3MxdEpmbEY3YkJiNXBoMWdSSUdDaFViV1VOMWomcD0wJm49QXRabjJoVDNwNlJtNVp1VVY4X25sQSZ0PUFBQUFBR0FhUXVzoMWdSSUdDaFViV1VOMWomcD0wJm49QXRabjJoVDNwNlJtNVp1VVY4X25sQSZ0PUFBQUFBR0FhUXVz";
+
 
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId);
@@ -19,14 +26,14 @@ const createCard = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     domString += `
                 <div class="card student-card text-center" style="width: 20em; height: 33em; margin: 1em" id="student-card">
-                  <h5 class="card-header" style="font-size: 2em">Hogwarts</h5>
+                  <h5 class="card-header" style="font-size: 2em; background-color: whitesmoke"id="card-header">${arr[i].house}</h5>
                   <div class="card-body">
                     <h5 class="card-title">${arr[i].name}</h5>
-                    <p class="card-text">${arr[i].house}</p>
+                    <p class="card-text"></p>
                     <hr>
-                    <div class="crest-img"><img src="./images/gryffindor.jpg" alt="House Crest" style="width: 80%"></div>
+                    <div class="crest-img"><img src="${arr[i].crest}" alt="House Crest" style="width: 100%" id="crest-img"></div>
                     <hr>
-                    <button type="button" class="btn btn-dark" id="${arr[i].id}">EXPEL</button>
+                    <button type="button" class="btn btn-dark" id="${arr[i].id}" style="margin-top: .8em">EXPEL</button>
                   </div>
                 </div>`;
   }
@@ -39,13 +46,13 @@ const handleButtonClick = (e) => {
 
   if (buttonId === "btn") {
     document.querySelector("#form").innerHTML = `
-            <div class="card" id="input-form" style="width: 40em; margin-top: -5em; margin-left: 2em; margin-bottom: 1em">
-              <h5 class="card-header m-2">Enter First Year's Student Name</h5>
-              <div class="card-body d-flex float-left">
-                <input type="text" class="form-control w-30 mr-3" id="name" placeholder="Student's Name..." aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="submit" id="sort">SORT</button>
-              </div>
-            </div>`;
+                <div class="card" id="input-form" style="width: 40em; margin-top: -5em; margin-left: 2em; margin-bottom: 1em">
+                  <h5 class="card-header m-2" id="form-header">Enter First Year's Student Name</h5>
+                  <div class="card-body d-flex float-left">
+                    <input type="text" class="form-control w-30 mr-3" id="name" placeholder="Student's Name..." aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary fade-in-btn" type="submit" id="sort">SORT</button>
+                  </div>
+                </div>`;
 
     document.querySelector("#sort").addEventListener("click", getFormInfo);
   }
@@ -55,6 +62,7 @@ const getFormInfo = (e) => {
   e.preventDefault();
 
   const name = document.querySelector("#name").value;
+  const crest = '';
 
   const randomHouseIndex = Math.floor(Math.random() * houses.length);
   const house = houses[randomHouseIndex];
@@ -69,7 +77,20 @@ const getFormInfo = (e) => {
     name,
     house,
     id,
+    crest,
   };
+
+  if (house === "Gryffindor") {
+    obj.crest = Gryffindor;
+  } else if (house === "Slytherin") {
+    obj.crest = Slytherin;
+  } else if (house === "Hufflepuff") {
+    obj.crest = Hufflepuff;
+  } else if (house === "Ravenclaw") {
+    obj.crest = Ravenclaw;
+  } else if (house === "Voldemort") {
+    obj.crest = Voldemort;
+  }
 
   students.push(obj);
   createCard(students);
@@ -99,4 +120,4 @@ const init = () => {
   buttonEvents();
 };
 
-init();co
+init();
