@@ -90,14 +90,14 @@ b {
   height: 10em;
 }
 
-#students {
+.students-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap-reverse;
-  background-color: #f8f8f8;
+  background-color: #fafafa;
   margin: 2em;
   padding: 2em;
-  margin-left: -oem;
+  margin-left: 0em;
   padding-left: 0em;
 }
 
@@ -118,12 +118,21 @@ b {
 
 #card-header {
   font-family: "Yeseva One", cursive;
+  font-size: 2em; 
+  background-color: whitesmoke;
+}
+
+.card-title {
+  height: 1em;
+  font-size: 1em;
+  margin-top: .5em;
 }
 
 #crest-img {
   height: 18em;
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
+  margin-top: 1em;
 }
 
 
