@@ -14,7 +14,6 @@ const Slytherin = "https://i.pinimg.com/564x/70/8d/52/708d520bfcb166221752314daf
 const Ravenclaw = "https://i.pinimg.com/564x/39/c7/9c/39c79c53ba35087545586d5865bb44f4.jpg";
 const Voldemort = "https://i.pinimg.com/originals/97/f5/e8/97f5e8f5f26735339fdd152e76d8d293.jpg?epik=dj0yJnU9OUtyX3MxdEpmbEY3YkJiNXBhttps://i.pinimg.com/originals/97/f5/e8/97f5e8f5f26735339fdd152e76d8d293.jpg?epik=dj0yJnU9OUtyX3MxdEpmbEY3YkJiNXBoMWdSSUdDaFViV1VOMWomcD0wJm49QXRabjJoVDNwNlJtNVp1VVY4X25sQSZ0PUFBQUFBR0FhUXVzoMWdSSUdDaFViV1VOMWomcD0wJm49QXRabjJoVDNwNlJtNVp1VVY4X25sQSZ0PUFBQUFBR0FhUXVz";
 
-
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId);
 
@@ -28,10 +27,9 @@ const createCard = (arr) => {
                 <div class="card student-card text-center" style="width: 20em; height: 30em; margin: 1em" id="student-card">
                   <h5 class="card-header" style="font-size: 2em; background-color: whitesmoke"id="card-header">${arr[i].house}</h5>
                   <div class="card-body">
-                    <h5 class="card-title">${arr[i].name}</h5>
-                    <p class="card-text"></p>
+                    <h5 class="card-title" id="${arr[i].color}">${arr[i].name}</h5>
                     <div class="crest-img"><img src="${arr[i].crest}" alt="House Crest" style="width: 100%" id="crest-img"></div>
-                    <button type="button" class="btn btn-dark" id="${arr[i].id}" style="margin-top: .8em">EXPEL</button>
+                    <button type="button" class="btn btn-dark expel-btn" id="${arr[i].id}" style="margin-top: .8em">EXPEL</button>
                   </div>
                 </div>`;
   }
@@ -43,8 +41,8 @@ const handleButtonClick = (e) => {
   const buttonId = e.target.id;
 
   if (buttonId === "btn") {
-    document.querySelector("#form").innerHTML = `
-                <div class="card" id="input-form" style="width: 40em; margin-top: -9em; margin-left: 2em; margin-bottom: 1em">
+    document.querySelector("#form-container").innerHTML = `
+                <div class="card" id="input-form"">
                   <h5 class="card-header m-2" id="form-header">Enter First Year's Student Name</h5>
                   <div class="card-body d-flex float-left">
                     <input type="text" class="form-control w-30 mr-3" id="name" placeholder="Student's Name..." aria-describedby="button-addon2">
@@ -71,6 +69,8 @@ const getFormInfo = (e) => {
 
   const id = studentIds.length ? studentIds[studentIds.length - 1] + 1 : 1;
 
+
+
   const obj = {
     name,
     house,
@@ -95,8 +95,6 @@ const getFormInfo = (e) => {
 
   document.querySelector("#name").value = "";
 };
-
-
 
 const deleteCard = (e) => {
   const targetType = e.target.type;

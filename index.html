@@ -14,26 +14,35 @@
 
 <body>
   
-  <div class="container d-flex flex-column" id="main">
+  <div id="main">
 
-    <div class="container d-flex justify-content-center">
 
-    <div class="jumbotron d-flex flex-column mx-auto" style="width: 60em; height: 25em; background:transparent !important"id="jumbotron">
-      <div class="potter-font"><img src="./images/potter-font.webp" alt="Harry Potter Text Logo Font" style="width: 100%; margin-bottom: 1em"></div>
-        <h1>and the sorting hat</h1>      
-        <blockquote class="blockquote align-self-center" style="width: 30em; margin-top: 2em; margin-bottom: 2em">The Sorting Hat is a hat at 
-          Hogwarts that magically determines which of of the houses each new student 
+    <div class="jumbotron" id="jumbotron">
+
+
+      <div id="left">
+        <div class="potter-font"><img src="./images/potter-font.webp" alt="Harry Potter Text Logo Font" style="width: 100%"></div>
+
+        <div id="h1"><h1>and the sorting hat!</h1></div>
+
+        <div id="blockquote"><blockquote>The Sorting Hat magically determines which of of the houses each new student 
           belongs to. The brave go to <b>Gryffindor</b>, the intellectual to <b>Ravenclaw</b>, 
           the cunning to <b>Slytherin</b> and the hardworking to <b>Hufflepuff</b>. Now's the chance 
-          for you to see who ended up where! Click the button to begin!</blockquote>
-        <button type="button" class="btn btn-dark mt-3 mx-auto" style="width: 5em" id="btn">Begin</button> 
+          for you to see who ended up where! ...... Shall we begin?</blockquote></div>
+          
+        <button type="button" class="btn btn-dark" id="btn">Begin</button> 
       </div>
-     <div class="potter-drawing"><img src="./images/potter-sorting-hat.jpg" alt=""></div>
-    </div>
 
-    <div class="container d-flex mx-auto w-60 h-5" id="form"></div>
 
-    <div class="container d-flex flex-wrap-reverse mx-auto" id="students"></div>
+      <div id="right">
+        <div class="potter-drawing"><img src="./images/potter-sorting-hat.jpg" alt="" id="potter-drawing"></div>
+      </div>
+   
+    </div> 
+
+    <div class="container form" id="form-container"></div>
+
+    <div class="container student" id="students"></div>
   
     
   </div>

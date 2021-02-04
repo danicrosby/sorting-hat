@@ -7,14 +7,38 @@
   }
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#jumbotron {
+  display: flex;
+  justify-content: center;
+  background: transparent !important;
+}
+
+#left {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 40em;
+}
+
+#right {
+  display: flex;
+  justify-content: center;
+}
+
 .potter-font {
   animation-name: fadein;
   animation-fill-mode: backwards;
   animation-duration: 4s;
-  animation-delay: .8s;
+  animation-delay: 0.8s;
 }
 
-h1 {
+#h1 {
   font-family: "Oswald", Helvetica Neue;
   font-variant: small-caps;
   text-align: center;
@@ -22,21 +46,38 @@ h1 {
   animation-fill-mode: backwards;
   animation-duration: 7s;
   animation-delay: 1s;
+  margin-top: .8em;
 }
 
-blockquote {
+#blockquote {
+  font-size: 18px;
+  width: 30em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   animation-name: fadein;
   animation-fill-mode: backwards;
   animation-duration: 8s;
   animation-delay: 2s;
   margin-bottom: 6em;
+  margin-left: 4em;
+}
+
+b {
+  font-size: 1.2em;
 }
 
 #btn {
+  width: 5em;
   animation-name: fadein;
   animation-fill-mode: backwards;
   animation-duration: 3s;
-  animation-delay: 10s;
+  animation-delay: 7s;
+  margin-left: 18em;
+  margin-top: -3em;
+}
+
+.potter-drawing {
+  margin-bottom: 1em;
 }
 
 .title-img-container {
@@ -44,12 +85,20 @@ blockquote {
   flex-flow: wrap;
 }
 
+#form-container {
+  width: 60em;
+  height: 10em;
+}
+
 #students {
-  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  background-color: #f8f8f8;
   margin: 2em;
   padding: 2em;
-  margin-left: -12em;
-  padding-left: 8em;
+  margin-left: -oem;
+  padding-left: 0em;
 }
 
 .student-card {
@@ -61,6 +110,10 @@ blockquote {
   animation-fill-mode: backwards;
   animation-duration: 1s;
   animation-delay: 0.3s;
+  width: 40em; 
+  margin-top: -15em; 
+  margin-left: -7em; 
+  margin-bottom: 1em
 }
 
 #card-header {
@@ -74,17 +127,4 @@ blockquote {
 }
 
 
-
-.sticky-section {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 80px; /* Change the height from the top here */
- }
- 
- #page-container {
-  overflow: visible !important;
- }
- 
- body {
-  display: initial;
- }
+/* MEDIA QUERY */
