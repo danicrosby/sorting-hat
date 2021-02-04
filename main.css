@@ -7,6 +7,12 @@
   }
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #jumbotron {
   display: flex;
   justify-content: center;
@@ -40,6 +46,7 @@
   animation-fill-mode: backwards;
   animation-duration: 7s;
   animation-delay: 1s;
+  margin-top: .8em;
 }
 
 #blockquote {
@@ -55,6 +62,10 @@
   margin-left: 4em;
 }
 
+b {
+  font-size: 1.2em;
+}
+
 #btn {
   width: 5em;
   animation-name: fadein;
@@ -62,7 +73,7 @@
   animation-duration: 3s;
   animation-delay: 7s;
   margin-left: 18em;
-  margin-top: -2em;
+  margin-top: -3em;
 }
 
 .potter-drawing {
@@ -74,12 +85,9 @@
   flex-flow: wrap;
 }
 
-#form {
+#form-container {
   width: 60em;
-  height: 2em;
-  background-color: blue;
-
-
+  height: 10em;
 }
 
 #students {
@@ -89,8 +97,8 @@
   background-color: #f8f8f8;
   margin: 2em;
   padding: 2em;
-  margin-left: -12em;
-  padding-left: 8em;
+  margin-left: -oem;
+  padding-left: 0em;
 }
 
 .student-card {
@@ -103,8 +111,8 @@
   animation-duration: 1s;
   animation-delay: 0.3s;
   width: 40em; 
-  margin-top: -9em; 
-  margin-left: -5em; 
+  margin-top: -15em; 
+  margin-left: -7em; 
   margin-bottom: 1em
 }
 
@@ -118,133 +126,5 @@
   border-bottom: 1px solid lightgrey;
 }
 
-@media screen and (max-width: 600px) {
-  #main {
-    max-width: 100%;
-    height: auto;
-  }
 
-  #top {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .jumbotron {
-    max-width: 100%;
-    height: auto;
-  }
-
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .potter-font {
-    animation-name: fadein;
-    animation-fill-mode: backwards;
-    animation-duration: 4s;
-    animation-delay: 0.8s;
-    max-width: 100%;
-    height: auto;
-  }
-
-  h1 {
-    font-family: "Oswald", Helvetica Neue;
-    font-variant: small-caps;
-    text-align: center;
-    animation-name: fadein;
-    animation-fill-mode: backwards;
-    animation-duration: 7s;
-    animation-delay: 1s;
-    max-width: 100%;
-    height: auto;
-  }
-
-  blockquote {
-    animation-name: fadein;
-    animation-fill-mode: backwards;
-    animation-duration: 8s;
-    animation-delay: 2s;
-    margin-bottom: 6em;
-    max-width: 100%;
-    height: auto;
-  }
-
-  #btn {
-    animation-name: fadein;
-    animation-fill-mode: backwards;
-    animation-duration: 3s;
-    animation-delay: 10s;
-    max-width: 100%;
-    height: auto;
-  }
-
-  #potter-drawing {
-    max-width: 100%;
-
-    height: auto;
-  }
-
-  #form {
-    max-width: 30%;
-    height: auto;
-  }
-
-  #input-form {
-    animation-name: fadein;
-    animation-fill-mode: backwards;
-    animation-duration: 1s;
-    animation-delay: 0.3s;
-    max-width: 30%;
-    height: auto;
-  }
-
-  .title-img-container {
-    display: flex;
-    flex-flow: wrap;
-    max-width: 30%;
-    height: auto;
-  }
-
-  #students {
-    background-color: #f8f8f8;
-    margin: 2em;
-    padding: 2em;
-    margin-left: -12em;
-    padding-left: 8em;
-    max-width: 30%;
-    height: auto;
-  }
-
-  .student-card {
-    box-shadow: 2px 2px rgb(236, 236, 236);
-  }
-
-  #card-header {
-    font-family: "Yeseva One", cursive;
-  }
-
-  #card-title {
-    max-width: 30%;
-    height: auto;
-  }
-
-  #crest-img {
-    height: 18em;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
-    max-width: 30%;
-    height: auto;
-  }
-
-  .expel-btn {
-    max-width: 30%;
-    height: auto;
-  }
-}
+/* MEDIA QUERY */

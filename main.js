@@ -41,7 +41,7 @@ const handleButtonClick = (e) => {
   const buttonId = e.target.id;
 
   if (buttonId === "btn") {
-    document.querySelector("#form").innerHTML = `
+    document.querySelector("#form-container").innerHTML = `
                 <div class="card" id="input-form"">
                   <h5 class="card-header m-2" id="form-header">Enter First Year's Student Name</h5>
                   <div class="card-body d-flex float-left">
