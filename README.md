@@ -25,7 +25,7 @@ WIREFRAME: "https://user-images.githubusercontent.com/68397076/106543803-0e3e450
 LOOM VIDEO DEMO:
 
 
-NELIFY WEBSITE:
+NELIFY WEBSITE: https://danicrosby-sorting-hat.netlify.app/
 
 
 PROJECT BOARD:

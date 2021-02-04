@@ -71,9 +71,10 @@ b {
   animation-name: fadein;
   animation-fill-mode: backwards;
   animation-duration: 3s;
-  animation-delay: 7s;
+  animation-delay: 6s;
   margin-left: 18em;
   margin-top: -3em;
+
 }
 
 .potter-drawing {
@@ -101,8 +102,12 @@ b {
   padding-left: 0em;
 }
 
-.student-card {
+.student-card-container{
   box-shadow: 2px 2px rgb(236, 236, 236);
+  animation-name: fadein;
+  animation-fill-mode: both;
+  animation-duration: .6s;
+  animation-delay: .3s;
 }
 
 #input-form {
@@ -124,7 +129,7 @@ b {
 
 .card-title {
   height: 1em;
-  font-size: 1em;
+  font-size: 1.2em;
   margin-top: .5em;
 }
 
