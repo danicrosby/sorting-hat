@@ -25,9 +25,9 @@ const createCard = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     domString += `
                 <div class="card student-card text-center" style="width: 20em; height: 30em; margin: 1em" id="student-card">
-                  <h5 class="card-header" style="font-size: 2em; background-color: whitesmoke"id="card-header">${arr[i].house}</h5>
+                  <h5 class="card-header" id="card-header">${arr[i].house}</h5>
                   <div class="card-body">
-                    <h5 class="card-title" id="${arr[i].color}">${arr[i].name}</h5>
+                    <h5 class="card-title">${arr[i].name}</h5>
                     <div class="crest-img"><img src="${arr[i].crest}" alt="House Crest" style="width: 100%" id="crest-img"></div>
                     <button type="button" class="btn btn-dark expel-btn" id="${arr[i].id}" style="margin-top: .8em">EXPEL</button>
                   </div>
@@ -45,7 +45,7 @@ const handleButtonClick = (e) => {
                 <div class="card" id="input-form"">
                   <h5 class="card-header m-2" id="form-header">Enter First Year's Student Name</h5>
                   <div class="card-body d-flex float-left">
-                    <input type="text" class="form-control w-30 mr-3" id="name" placeholder="Student's Name..." aria-describedby="button-addon2">
+                    <input type="text" class="form-control w-30 mr-3" id="name" placeholder="Student's Name..." required>
                     <button class="btn btn-outline-secondary fade-in-btn" type="submit" id="sort">SORT</button>
                   </div>
                 </div>`;
@@ -93,7 +93,7 @@ const getFormInfo = (e) => {
   students.push(obj);
   createCard(students);
 
-  document.querySelector("#name").value = "";
+  document.querySelector("#name").value = '';
 };
 
 const deleteCard = (e) => {
@@ -106,6 +106,7 @@ const deleteCard = (e) => {
     );
     students.splice(studentIndex, 1);
   }
+
   createCard(students);
 };
 

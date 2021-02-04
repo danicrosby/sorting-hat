@@ -1,11 +1,3 @@
-
-
-## Add Button Hints
-
-
-## Expel Button Hints
-Think of a way you can expel students without just hiding those divs on the page. This would mean when the button is clicked you modify the array of students and pass the new array into your print to dom function.  Double hint - put a unique id in the student object when you create them.
-
 ## Optional Bonus
 - House Colors: The color of the student's card changes depending on which house they were sorted. 
 - Card Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
@@ -24,7 +16,7 @@ PROJECT OVERVIEW:
 This is what the finished app should have:
 To have the sorting hat introduce itself and start the sorting process by clicking on a button. A form will appear to input student's name to sort in a random Hogwarts house. On sorting a student, the form should clear and a card with the student and random house will be printed to the DOM and a button on the card to expel a student after they have been sorted.
 
-Houses are: (Gryffindor, Hufflepuff, Ravenclaw, or Slytherin). 
+Houses are: (Gryffindor, Hufflepuff, Ravenclaw, Slytherin or Voldemort's Army). 
 
 
 WIREFRAME: "https://user-images.githubusercontent.com/68397076/106543803-0e3e4500-64cc-11eb-89a9-1dd9df7b9539.png"
