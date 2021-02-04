@@ -60,8 +60,8 @@ const getFormInfo = (e) => {
   const name = document.querySelector("#name").value;
 
   if (name === '') {
-    alert("please enter a student name")
-    return
+    alert('PLEASE ENTER A NAME TO GET SORTED')
+    return;
   }
 
   const crest = '';
