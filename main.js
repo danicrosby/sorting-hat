@@ -58,6 +58,12 @@ const getFormInfo = (e) => {
   e.preventDefault();
 
   const name = document.querySelector("#name").value;
+
+  if (name === '') {
+    alert("please enter a student name")
+    return
+  }
+
   const crest = '';
 
   const randomHouseIndex = Math.floor(Math.random() * houses.length);
