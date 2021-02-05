@@ -36,6 +36,7 @@ main {
   animation-fill-mode: backwards;
   animation-duration: 4s;
   animation-delay: 0.8s;
+  margin-bottom: 1em;
 }
 
 h1 {
@@ -152,22 +153,8 @@ b {
 
   #jumbotron {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    flex-wrap: wrap;
     background: transparent !important;
-  }
-
-  #left {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    /* background-color: red; */
-  }
-  
-  #right {
-    display: flex;
-    justify-content: center;
-    background-color: green;
   }
 
   .potter-font {
@@ -177,7 +164,6 @@ b {
   h1 {
     font-family: "Oswald", Helvetica Neue;
     font-variant: small-caps;
-    float: left:
   }
 
   #blockquote {
@@ -190,16 +176,12 @@ b {
   }
 
   #btn {
+    text-align: center;
     width: 5em;
-    margin-top: -1em;  }
+  }
 
   .potter-drawing {
     display: none;
-  }
-
-  .title-img-container {
-    display: flex;
-    flex-flow: wrap;
   }
 
   #form-container {

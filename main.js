@@ -60,7 +60,7 @@ const getFormInfo = (e) => {
   const name = document.querySelector("#name").value;
 
   if (name === '') {
-    alert('             **** PLEASE ENTER A NAME TO GET SORTED ****')
+    alert('         * PLEASE ENTER A NAME TO GET SORTED *')
     return;
   }
 
