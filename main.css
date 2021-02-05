@@ -36,6 +36,7 @@ main {
   animation-fill-mode: backwards;
   animation-duration: 4s;
   animation-delay: 0.8s;
+  margin-bottom: 1em;
 }
 
 h1 {
