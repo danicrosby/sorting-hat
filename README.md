@@ -22,7 +22,7 @@ Houses are: (Gryffindor, Hufflepuff, Ravenclaw, Slytherin or Voldemort's Army).
 WIREFRAME: "https://user-images.githubusercontent.com/68397076/106543803-0e3e4500-64cc-11eb-89a9-1dd9df7b9539.png"
 
 
-LOOM VIDEO DEMO:
+LOOM VIDEO DEMO: https://www.loom.com/share/048381d3772449e583a242804ce12cc1
 
 
 NELIFY WEBSITE: https://danicrosby-sorting-hat.netlify.app/
