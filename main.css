@@ -38,7 +38,7 @@ main {
   animation-delay: 0.8s;
 }
 
-#h1 {
+h1 {
   font-family: "Oswald", Helvetica Neue;
   font-variant: small-caps;
   text-align: center;
@@ -56,9 +56,9 @@ main {
   animation-fill-mode: backwards;
   animation-duration: 7s;
   animation-delay: 2s;
-  margin-bottom: 6em;
+  margin-bottom: 5.8em;
   margin-left: 4em;
-  margin-top: 1.6em;
+  margin-top: 1.2em;
 }
 
 b {
@@ -97,7 +97,7 @@ b {
   animation-duration: 1s;
   animation-delay: 0.3s;
   width: 40em; 
-  margin-top: -13.5em; 
+  margin-top: -14.2em; 
   margin-left: -7em; 
   margin-bottom: 1em;
 }
@@ -155,26 +155,29 @@ b {
     flex-flow: column wrap;
     justify-content: center;
     background: transparent !important;
-
   }
+
   #left {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    /* background-color: red; */
   }
   
   #right {
     display: flex;
     justify-content: center;
+    background-color: green;
   }
 
   .potter-font {
     width: 30em;
   }
 
-  #h1 {
+  h1 {
     font-family: "Oswald", Helvetica Neue;
     font-variant: small-caps;
+    float: left:
   }
 
   #blockquote {
@@ -188,8 +191,7 @@ b {
 
   #btn {
     width: 5em;
-    margin-bottom: 0em;
-  }
+    margin-top: -1em;  }
 
   .potter-drawing {
     display: none;
