@@ -39,11 +39,6 @@ const createCard = (arr) => {
 };
 
 
-
-
-
-// EXPELLED
-
 const expelledCard = (arr) => {
   let domString = "";
   for (let i = 0; i < arr.length; i++) {
@@ -126,6 +121,7 @@ const getFormInfo = (e) => {
   document.querySelector("#name").value = '';
 };
 
+
 const deleteCard = (e) => {
   const targetType = e.target.type;
   const targetId = Number(e.target.id);
@@ -142,10 +138,12 @@ const deleteCard = (e) => {
   expelledCard(voldemortArmy);
 };
 
+
 const buttonEvents = () => {
   document.querySelector("#btn").addEventListener("click", handleButtonClick);
   document.querySelector("#students").addEventListener("click", deleteCard);
 };
+
 
 const init = () => {
   buttonEvents();
