@@ -109,7 +109,8 @@ b {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap-reverse;
-  background-color: #f8f8f8;
+  justify-content: center;
+  background-color: #8a8a8a;
   padding: 2em;
   margin: 2em;
   margin-left: 0em;
@@ -132,10 +133,14 @@ b {
   margin-top: .5em;
 }
 
+
 #crest-img {
   margin-top: 1em;
   height: 18em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
+
 
 
 /* START EXPELLED STUDENT */
@@ -146,32 +151,42 @@ b {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap-reverse;
-  background-color: #f8f8f8;
+  justify-content: center;
   padding: 2em;
   margin: 2em;
   margin-left: 0em;
   margin-top: -.4em;
 }
 
-.student-card {
+#expelled-card {
   box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+  background-color: black;
 }
 
-#card-header {
+#expelled-card-header {
   font-family: "Yeseva One", cursive;
   font-size: 2em;
-  background-color: rgb(235, 235, 235);
-}
+  background-color: black;
+  color: lightgrey;
+  margin-top: .5em;
+} 
 
-.card-title {
-  font-size: 1.2em;
+.expelled-card-title {
+  background-color: black;
+  font-size: 2em;
   height: 1em;
   margin-top: .5em;
+  color: green;
 }
 
-#crest-img {
-  margin-top: 1em;
+.expelled-card-body {
+  background-color: black;
+}
+
+.expelled-crest-img {
+  margin-top: 3em;
   height: 18em;
+  padding: 1em;
 }
 
 
@@ -224,7 +239,6 @@ b {
 
   #form-container {
     display: flex; 
-    /* justify-content: center; */
     background-color: whitesmoke;
     width: 28em;
     height: 10em;
@@ -252,15 +266,6 @@ b {
     padding: 2em;
   }
 
-  #expelled {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap-reverse;
-    background-color: #fafafa;
-    margin: 2em;
-    padding: 2em;
-  }
-
   #card-header {
     font-family: "Yeseva One", cursive;
     font-size: 2em;
@@ -277,6 +282,60 @@ b {
     border-bottom: 1px solid lightgrey;
     height: 18em;
     margin-top: 1em;
+  }
+
+  /* //EXPELLED */
+
+
+  #expelled {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    background-color: #fafafa;
+    margin: 2em;
+    padding: 2em;
+  }
+
+  .expelled-students-container {
+    background-image: url(https://pa1.narvii.com/7733/023508bb8415161feb393a8ec19dad0774a1fe74r1-600-255_hq.gif);
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap-reverse;
+    padding: 2em;
+    margin: 2em;
+    margin-left: 0em;
+    margin-top: -.4em;
+  }
+  
+  #expelled-card {
+    box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+    background-color: black;
+  }
+  
+  #expelled-card-header {
+    font-family: "Yeseva One", cursive;
+    font-size: 2em;
+    background-color: black;
+    color: lightgrey;
+    margin-top: .5em;
+  } 
+  
+  .expelled-card-title {
+    background-color: black;
+    font-size: 2em;
+    height: 1em;
+    margin-top: .5em;
+    color: green;
+  }
+  
+  .expelled-card-body {
+    background-color: black;
+  }
+  
+  .expelled-crest-img {
+    margin-top: 3em;
+    height: 18em;
+    padding: 1em;
   }
 
 }
