@@ -50,7 +50,6 @@ const expelledCard = (arr) => {
     domString += `
                   <div class="card expelled-student-card text-center" style="width: 20em; height: 30em; margin: 1em" id="expelled-card">
                     <h5 class="expelled-card-header" id="expelled-card-header"> Voldemort's Army </h5>
-                    <hr>
                     <div class="expelled-card-body">
                       <h5 class="expelled-card-title">${arr[i].name}</h5>
                       <div class="expelled-crest-img"><img src="https://i.pinimg.com/originals/97/f5/e8/97f5e8f5f26735339fdd152e76d8d293.jpg?epik=dj0yJnU9OUtyX3MxdEpmbEY3YkJiNXBhttps://i.pinimg.com/originals/97/f5/e8/97f5e8f5f26735339fdd152e76d8d293.jpg?epik=dj0yJnU9OUtyX3MxdEpmbEY3YkJiNXBoMWdSSUdDaFViV1VOMWomcD0wJm49QXRabjJoVDNwNlJtNVp1VVY4X25sQSZ0PUFBQUFBR0FhUXVzoMWdSSUdDaFViV1VOMWomcD0wJm49QXRabjJoVDNwNlJtNVp1VVY4X25sQSZ0PUFBQUFBR0FhUXVz" alt="Crest" style="width: 100%"></div>
