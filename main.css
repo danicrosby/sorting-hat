@@ -110,11 +110,18 @@ b {
   justify-content: flex-start;
   flex-wrap: wrap-reverse;
   justify-content: center;
+  animation-name: fadein;
   background-color: #eeeeee;
   padding: 2em;
   margin: 2em;
   margin-left: 0em;
   margin-top: -0.4em;
+}
+
+#both-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .student-card {
@@ -259,6 +266,12 @@ b {
     background-color: #fafafa;
     margin: 2em;
     padding: 2em;
+  }
+
+  #both-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   #card-header {
