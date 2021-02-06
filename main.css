@@ -110,7 +110,7 @@ b {
   justify-content: flex-start;
   flex-wrap: wrap-reverse;
   justify-content: center;
-  background-color: #8a8a8a;
+  background-color: #dadada;
   padding: 2em;
   margin: 2em;
   margin-left: 0em;
@@ -167,7 +167,7 @@ b {
   font-family: "Yeseva One", cursive;
   font-size: 2em;
   background-color: black;
-  color: lightgrey;
+  color: green;
   margin-top: .5em;
 } 
 
@@ -176,7 +176,6 @@ b {
   font-size: 2em;
   height: 1em;
   margin-top: .5em;
-  color: green;
 }
 
 .expelled-card-body {
