@@ -6,7 +6,7 @@ PROJECT NAME: Harry Potter Sorting Hat
 
 PROJECT OVERVIEW: 
 
-Have the sorting hat introduce itself and start the sorting process by clicking on a button. A form will appear to input student's name to sort in a random Hogwarts house. On sorting a student, the form should clear and a card with the student and random house will be printed to the DOM and a button on the card to expel a student after they have been sorted.
+The Hogwarts Sorting Hat introduce itself and start the sorting process by clicking on a button. A form will appear to input student's name to sort in a random Hogwarts house. On sorting a student, the form should clear and a card with the student and random house will be printed to the DOM and a button on the card to expel a student after they have been sorted.
 
 Houses are: (Gryffindor, Hufflepuff, Ravenclaw, Slytherin and Voldemort's Army)
 

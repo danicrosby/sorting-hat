@@ -1,24 +1,25 @@
 const students = [];
+const voldemortArmy = [];
 
 const houses = [
   "Gryffindor",
   "Hufflepuff",
   "Ravenclaw",
   "Slytherin",
-  "Voldemort",
 ];
 
 const Gryffindor = "https://i.pinimg.com/564x/52/f6/a3/52f6a3ab31c18f05bb820a4c2d3ae7be.jpg";
 const Hufflepuff = "https://i.pinimg.com/564x/1e/da/bb/1edabbdae3522af14d88885d3d4a9d96.jpg";
 const Slytherin = "https://i.pinimg.com/564x/70/8d/52/708d520bfcb166221752314daf91b0f0.jpg";
 const Ravenclaw = "https://i.pinimg.com/564x/39/c7/9c/39c79c53ba35087545586d5865bb44f4.jpg";
-const Voldemort = "https://i.pinimg.com/originals/97/f5/e8/97f5e8f5f26735339fdd152e76d8d293.jpg?epik=dj0yJnU9OUtyX3MxdEpmbEY3YkJiNXBhttps://i.pinimg.com/originals/97/f5/e8/97f5e8f5f26735339fdd152e76d8d293.jpg?epik=dj0yJnU9OUtyX3MxdEpmbEY3YkJiNXBoMWdSSUdDaFViV1VOMWomcD0wJm49QXRabjJoVDNwNlJtNVp1VVY4X25sQSZ0PUFBQUFBR0FhUXVzoMWdSSUdDaFViV1VOMWomcD0wJm49QXRabjJoVDNwNlJtNVp1VVY4X25sQSZ0PUFBQUFBR0FhUXVz";
+
 
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId);
 
   selectedDiv.innerHTML = textToPrint;
 };
+
 
 const createCard = (arr) => {
   let domString = "";
@@ -28,7 +29,7 @@ const createCard = (arr) => {
                   <h5 class="card-header" id="card-header">${arr[i].house}</h5>
                   <div class="card-body">
                     <h5 class="card-title">${arr[i].name}</h5>
-                    <div class="crest-img"><img src="${arr[i].crest}" alt="House Crest" style="width: 100%" id="crest-img"></div>
+                    <div class="crest-img"><img src="${arr[i].crest}" alt="Crest" style="width: 100%" id="crest-img"></div>
                     <button type="button" class="btn btn-dark expel-btn" id="${arr[i].id}" style="margin-top: .8em">EXPEL</button>
                   </div>
                 </div>`;
@@ -36,6 +37,32 @@ const createCard = (arr) => {
 
   printToDom("#students", domString);
 };
+
+
+
+
+
+// EXPELLED
+
+const expelledCard = (arr) => {
+  let domString = "";
+  for (let i = 0; i < arr.length; i++) {
+    domString += `
+                  <div class="card expelled-student-card text-center" style="width: 20em; height: 30em; margin: 1em" id="student-card">
+                    <h5 class="expelled-card-header" id="card-header">${arr[i].house}</h5>
+                    <div class="expelled-card-body">
+                      <h5 class="expelled-card-title">${arr[i].name}</h5>
+                      <div class="crest-img"><img src="https://i.pinimg.com/originals/97/f5/e8/97f5e8f5f26735339fdd152e76d8d293.jpg?epik=dj0yJnU9OUtyX3MxdEpmbEY3YkJiNXBhttps://i.pinimg.com/originals/97/f5/e8/97f5e8f5f26735339fdd152e76d8d293.jpg?epik=dj0yJnU9OUtyX3MxdEpmbEY3YkJiNXBoMWdSSUdDaFViV1VOMWomcD0wJm49QXRabjJoVDNwNlJtNVp1VVY4X25sQSZ0PUFBQUFBR0FhUXVzoMWdSSUdDaFViV1VOMWomcD0wJm49QXRabjJoVDNwNlJtNVp1VVY4X25sQSZ0PUFBQUFBR0FhUXVz" alt="Crest" style="width: 100%" id="crest-img"></div>
+                    </div>
+                  </div>`;         
+  }
+
+  printToDom("#expelled", domString);
+};
+
+
+
+
 
 const handleButtonClick = (e) => {
   const buttonId = e.target.id;
@@ -76,7 +103,6 @@ const getFormInfo = (e) => {
   const id = studentIds.length ? studentIds[studentIds.length - 1] + 1 : 1;
 
 
-
   const obj = {
     name,
     house,
@@ -92,8 +118,6 @@ const getFormInfo = (e) => {
     obj.crest = Hufflepuff;
   } else if (house === "Ravenclaw") {
     obj.crest = Ravenclaw;
-  } else if (house === "Voldemort") {
-    obj.crest = Voldemort;
   }
 
   students.push(obj);
@@ -110,10 +134,12 @@ const deleteCard = (e) => {
     const studentIndex = students.findIndex(
       (student) => student.id === targetId
     );
-    students.splice(studentIndex, 1);
+    let expelledStudent = students.splice(studentIndex, 1);
+    voldemortArmy.push(expelledStudent);
   }
 
   createCard(students);
+  expelledCard(voldemortArmy);
 };
 
 const buttonEvents = () => {

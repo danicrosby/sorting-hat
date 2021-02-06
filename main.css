@@ -15,7 +15,6 @@ main {
 
 #jumbotron {
   display: flex;
-  /* flex-flow: column wrap; */
   justify-content: center;
   background: transparent !important;
 }
@@ -106,21 +105,25 @@ b {
   margin-bottom: 1em;
 }
 
-
 .students-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap-reverse;
-  background-color: #fafafa;
+  background-color: #f8f8f8;
   padding: 2em;
   margin: 2em;
   margin-left: 0em;
   margin-top: -.4em;
 }
 
+.student-card {
+  box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+}
+
 #card-header {
   font-family: "Yeseva One", cursive;
   font-size: 2em;
+  background-color: rgb(235, 235, 235);
 }
 
 .card-title {
@@ -130,15 +133,46 @@ b {
 }
 
 #crest-img {
-  border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
   margin-top: 1em;
   height: 18em;
 }
 
 
+/* START EXPELLED STUDENT */
 
+.expelled-students-container {
+  background-image: url(https://pa1.narvii.com/7733/023508bb8415161feb393a8ec19dad0774a1fe74r1-600-255_hq.gif);
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap-reverse;
+  background-color: #f8f8f8;
+  padding: 2em;
+  margin: 2em;
+  margin-left: 0em;
+  margin-top: -.4em;
+}
 
+.student-card {
+  box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+}
+
+#card-header {
+  font-family: "Yeseva One", cursive;
+  font-size: 2em;
+  background-color: rgb(235, 235, 235);
+}
+
+.card-title {
+  font-size: 1.2em;
+  height: 1em;
+  margin-top: .5em;
+}
+
+#crest-img {
+  margin-top: 1em;
+  height: 18em;
+}
 
 
 
@@ -210,6 +244,15 @@ b {
   }
 
   .students-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    background-color: #fafafa;
+    margin: 2em;
+    padding: 2em;
+  }
+
+  #expelled {
     display: flex;
     justify-content: center;
     flex-wrap: wrap-reverse;
