@@ -14,6 +14,8 @@ WIREFRAME: "https://user-images.githubusercontent.com/68397076/106543803-0e3e450
 
 
 LOOM VIDEO DEMO: https://www.loom.com/share/048381d3772449e583a242804ce12cc1
+Loom w/ Stretch Goal
+https://www.loom.com/share/11b17c2b59424b94bb53da2565ff699f
 
 
 NELIFY WEBSITE: https://danicrosby-sorting-hat.netlify.app/
