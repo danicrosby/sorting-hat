@@ -15,7 +15,6 @@ Houses are: (Gryffindor, Hufflepuff, Ravenclaw, Slytherin and Voldemort's Army)
 - [Stretch Goal Video](https://www.loom.com/share/11b17c2b59424b94bb53da2565ff699f)
 - [Deployed Site](https://danicrosby-sorting-hat.netlify.app/)
 - [Project Board](https://github.com/danicrosby/sorting-hat/projects/1)
-- []()
 
 
 SCREENSHOTS:
@@ -25,7 +24,7 @@ SCREENSHOTS:
 
 
 
-#### User Story: 
+#### User Story 
 
 - [ ] When a user navigates to the page
 - [ ]  A sorting hat tells a story and prompted to click a begin button
@@ -36,9 +35,9 @@ SCREENSHOTS:
 
 
 
-CONTRIBUTORS | 
+#### Contributors
 - [Dani Crosby](https://github.com/danicrosby)
 
 
-Credits:
+#### Credits
 The wonderful world of online artist for the inspirations and art for this project.
